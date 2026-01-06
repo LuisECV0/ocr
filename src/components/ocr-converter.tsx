@@ -38,16 +38,20 @@ export function OcrConverter() {
   }
 
   return (
-    <div className="grid lg:grid-cols-2 gap-8">
-      <ImageUploader
-        onImageUpload={handleImageProcess}
-        isProcessing={isProcessing}
-      />
+    <div className="grid lg:grid-cols-2 gap-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
+      <div className="animate-in fade-in slide-in-from-left-4 duration-700">
+        <ImageUploader
+          onImageUpload={handleImageProcess}
+          isProcessing={isProcessing}
+        />
+      </div>
 
-      <TextOutput
-        text={extractedText}
-        isProcessing={isProcessing}
-      />
+      <div className="animate-in fade-in slide-in-from-right-4 duration-700">
+        <TextOutput
+          text={extractedText}
+          isProcessing={isProcessing}
+        />
+      </div>
     </div>
   )
 }
